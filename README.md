@@ -1,14 +1,16 @@
 # MaterialBanner
 
+Support API Level 8+
+
 ## ScreenShot:
-![](https://github.com/rtugeek/MaterialBanner/blob/master/screenshot/GIF.gif)
+![](https://github.com/joielechong/MaterialBanner/blob/master/screenshot/GIF.gif)
 
 
 ## Idea from Google Trips:
-![](https://github.com/rtugeek/MaterialBanner/blob/master/screenshot/googletrips.jpg)
+![](https://github.com/joielechong/MaterialBanner/blob/master/screenshot/googletrips.jpg)
 
 
-##[Demo APK](https://github.com/rtugeek/MaterialBanner/releases/download/1.0.0/Demo.apk)
+##[Demo APK](https://github.com/joielechong/MaterialBanner/releases/download/1.0.0/Demo.apk)
 
 ### Attrs
 |attr|format|default|
@@ -20,20 +22,19 @@
 
 
 ### Gradle:
-[![](https://jitpack.io/v/rtugeek/materialbanner.svg)](https://jitpack.io/#rtugeek/materialbanner) [![API](https://img.shields.io/badge/API-8%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialBanner-green.svg?style=true)](https://android-arsenal.com/details/1/3118)
 
 Step 1. Add the JitPack repository in your root build.gradle at the end of repositories:
 ```
-  allprojects {
-		repositories {
-			...
-			maven { url "https://jitpack.io" }
-		}
-	}
+ allprojects {
+      repositories {
+          ...
+          maven { url "https://jitpack.io" }
+      }
+}
 ```
 Step 2. Add the dependency
 ```
-  compile 'com.github.rtugeek:materialbanner:1.0.0'
+compile 'com.github.joielechong:materialbanner:1.0.0'
 ```
 
 XML
@@ -60,7 +61,7 @@ XML
   //Custom indicator view needs to implement com.freegeek.android.materialbanner.view.indicator.PageIndicator
   
 ```
-[More usage](https://github.com/rtugeek/MaterialBanner/blob/master/app/src/main/java/com/freegeek/android/materialbanner/demo/MainActivity.java)
+[More usage](https://github.com/joielechong/MaterialBanner/blob/master/app/src/main/java/com/freegeek/android/materialbanner/demo/MainActivity.java)
 
 Listener
 ```java
@@ -92,29 +93,23 @@ Listener
         
 ```
 
-
-**Spread the word**
-
-<a href="https://twitter.com/intent/tweet?text=Check%20out%20the%MaterialBanner%20library%20on%20Github:%20https://github.com/rtugeek/MaterialBanner/" target="_blank" title="share to twitter" style="width:100%"><img src="https://github.com/PhilJay/MPAndroidChart/blob/master/design/twitter_icon.png" title="Share on Twitter" width="35" height=35 />
-<a href="https://plus.google.com/share?url=https://github.com/rtugeek/MaterialBanner/" target="_blank" title="share to Google+" style="width:100%"><img src="https://github.com/PhilJay/MPAndroidChart/blob/master/design/googleplus_icon.png" title="Share on Google+" width="35" height=35 />
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/rtugeek/MaterialBanner/" target="_blank" title="share to facebook" style="width:100%"><img src="https://github.com/PhilJay/MPAndroidChart/blob/master/design/facebook_icon.png" title="Share on Facebook" width="35" height=35 />
-
 ## Thanks to:
 [Android-ConvenientBanner](https://github.com/saiwu-bigkoo/Android-ConvenientBanner)	
 [ViewPagerIndicator](https://github.com/JakeWharton/ViewPagerIndicator)
 
 ## License
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
-   
-    Copyright (C) 2004 Leon Fu <rtugeek@gmail.com>
-   
-    Everyone is permitted to copy and distribute verbatim or modified
-    copies of this license document, and changing it is allowed as long
-    as the name is changed.
-   
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-   
-     0. You just DO WHAT THE FUCK YOU WANT TO.
+Copyright (C) 2017 Joielechong.
+Copyright (C) 2004 Leon Fu <rtugeek@gmail.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
