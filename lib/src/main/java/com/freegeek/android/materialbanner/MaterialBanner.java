@@ -90,7 +90,7 @@ public class MaterialBanner<T> extends FrameLayout{
     private void init(Context context,AttributeSet attrs){
         TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.MaterialBanner);
         mIndicatorMargin = (int) a.getDimension(R.styleable.MaterialBanner_indicatorMargin,dip2Pix(context,10));
-        mIndicatorGravity = IndicatorGravity.valueOf((int) a.getInt(R.styleable.MaterialBanner_indicatorGravity,0));
+        mIndicatorGravity = IndicatorGravity.valueOf(a.getInt(R.styleable.MaterialBanner_indicatorGravity,0));
         mIndicatorInside = a.getBoolean(R.styleable.MaterialBanner_indicatorInside,true);
         mMatch = a.getBoolean(R.styleable.MaterialBanner_match,false);
         a.recycle();
@@ -218,19 +218,19 @@ public class MaterialBanner<T> extends FrameLayout{
         private final WeakReference<MaterialBanner> reference;
 
         AdSwitchTask(MaterialBanner MaterialBanner) {
-            this.reference = new WeakReference<MaterialBanner>(MaterialBanner);
+            this.reference = new WeakReference<>(MaterialBanner);
         }
 
         @Override
         public void run() {
-            MaterialBanner MaterialBanner = reference.get();
+            MaterialBanner materialBanner = reference.get();
 
-            if(MaterialBanner != null){
-                if (MaterialBanner.mViewPager != null && MaterialBanner.turning) {
-                    int page = MaterialBanner.mViewPager.getCurrentItem() + 1;
-                    if(page >= MaterialBanner.mViewPager.getLastItem())  page = 0;
-                    MaterialBanner.mViewPager.setCurrentItem(page % MaterialBanner.mViewPager.getLastItem());
-                    MaterialBanner.postDelayed(MaterialBanner.adSwitchTask, MaterialBanner.autoTurningTime);
+            if(materialBanner != null){
+                if (materialBanner.mViewPager != null && materialBanner.turning) {
+                    int page = materialBanner.mViewPager.getCurrentItem() + 1;
+                    if(page >= materialBanner.mData.size())  page = 0;
+                    materialBanner.mViewPager.setCurrentItem(page % materialBanner.mData.size());
+                    materialBanner.postDelayed(materialBanner.adSwitchTask, materialBanner.autoTurningTime);
                 }
             }
         }
